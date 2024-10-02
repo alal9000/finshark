@@ -9,3 +9,5 @@
 up2:
 
 TS: 6 - event handlers
+
+onClick: (e: SyntheticEvent) => void;
