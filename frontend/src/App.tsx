@@ -1,9 +1,8 @@
 import { ChangeEvent, SyntheticEvent, useState } from 'react';
-import './App.css';
 import CardList from './Components/CardList/CardList';
 import Search from './Components/Search/Search';
-import { CompanySearch } from './company';
-import { searchCompanies } from './api';
+import { CompanySearch } from './Types/company';
+import { searchCompanies } from './Api/api';
 
 function App() {
   const [search, setSearch] = useState<string>('');

@@ -20,5 +20,5 @@
     "noUnusedParameters": true,
     "noFallthroughCasesInSwitch": true
   },
-  "include": ["src", "key.ts"]
+  "include": ["src", "src/Api/key.ts"]
 }

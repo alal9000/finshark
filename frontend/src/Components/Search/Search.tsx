@@ -10,7 +10,7 @@ const Search = ({ onClick, search, handleChange }: Props): JSX.Element => {
   return (
     <div>
       <input value={search} onChange={(e) => handleChange(e)}></input>
-      <button onClick={(e) => onClick(e)} />
+      <button onClick={(e) => onClick(e)}>Submit</button>
     </div>
   );
 };

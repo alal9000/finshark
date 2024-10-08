@@ -1,6 +1,6 @@
 import axios from 'axios';
-import { CompanySearch } from './company';
-import { REACT_APP_API_KEY } from '../key';
+import { CompanySearch } from '../Types/company';
+import { REACT_APP_API_KEY } from './key';
 
 interface SearchResponse {
   data: CompanySearch[];
