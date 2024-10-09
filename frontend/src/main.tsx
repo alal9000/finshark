@@ -1,9 +1,9 @@
 import { StrictMode } from 'react';
 import { createRoot } from 'react-dom/client';
 import App from './App.tsx';
-import { searchCompanies } from './Api/api.tsx';
+import { searchCompanies } from './Api/api.ts';
 
-console.log(searchCompanies('tsla'));
+// console.log(searchCompanies('nvda'));
 
 createRoot(document.getElementById('root')!).render(
   <StrictMode>
