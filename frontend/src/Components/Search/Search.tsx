@@ -3,7 +3,7 @@ import { ChangeEvent, SyntheticEvent } from 'react';
 interface Props {
   handleChange: (e: ChangeEvent<HTMLInputElement>) => void;
   handleSubmit: (e: SyntheticEvent) => void;
-  search: string | undefined;
+  search: string;
 }
 
 export const Search = ({ handleChange, handleSubmit, search }: Props): JSX.Element => {

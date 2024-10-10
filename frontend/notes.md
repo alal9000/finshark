@@ -6,8 +6,12 @@
 - npm install dotenv --save
 
 =========================================
-up2:
+up2: - analysing the Search arrow function particualy the jsx and its props
 
-TS: 6 - event handlers
+TS: 11 - Lists
 
 onClick: (e: SyntheticEvent) => void;
+
+===========================================
+
+
