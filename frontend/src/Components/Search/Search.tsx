@@ -1,16 +1,15 @@
-import { ChangeEvent, SyntheticEvent } from 'react';
+import { ChangeEvent} from 'react';
 
 interface Props {
   handleChange: (e: ChangeEvent<HTMLInputElement>) => void;
-  handleSubmit: (e: SyntheticEvent) => void;
-  search: string;
+  handleClick: () => void;
 }
 
-export const Search = ({ handleChange, handleSubmit, search }: Props): JSX.Element => {
+export const Search = ({ handleChange, handleClick }: Props): JSX.Element => {
   return (
     <div>
-      <input value={search} onChange={(e) => handleChange(e)}></input>
-      <button onClick={(e) => handleSubmit(e)}>Submit</button>
+      <input onChange={(e) => handleChange(e)}></input>
+      <button onClick={() => handleClick()}>Go</button>
     </div>
   );
 };
