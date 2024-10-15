@@ -3,10 +3,12 @@ import { CompanySearch } from "./Types/company";
 import CardList from "./Components/CardList/CardList";
 import { Search } from "./Components/Search/Search";
 import { searchCompanies } from "./Api/api";
+import ListPortfolio from "./Components/Portfolio/ListPortfolio/ListPortfolio";
 
 function App() {
   const [search, setSearch] = useState<string>(""); // users search query
   const [searchResult, setSearchResult] = useState<CompanySearch[]>([]); // store company data returned from successful API call
+  const [portfolioValues, setPortfolioValues] = useState<string[]>([]);
   const [serverError, setServerError] = useState<string>(""); // store error returned from failed API call
 
   // event handlers
@@ -29,9 +31,12 @@ function App() {
     console.log(searchResult);
   };
 
-  const onPortfolioCreate = (e: SyntheticEvent) => {
+  const onPortfolioCreate = (e: any) => {
     e.preventDefault();
-    console.log(e);
+    const exists = portfolioValues.find((value) => value === e.target[0].value);
+    if (exists) return;
+    const updatedPortfolio = [...portfolioValues, e.target[0].value];
+    setPortfolioValues(updatedPortfolio); // creates a new array in memory so react knows the state has changed
   };
 
   // JSX
@@ -41,6 +46,7 @@ function App() {
         {/* pass down three props to child component from parent: 1 state variable and two functions */}
         <Search handleChange={handleChange} handleClick={handleClick} />
         {serverError && <h1>{serverError}</h1>}
+        <ListPortfolio portfolioValues={portfolioValues} />
         <CardList
           searchResult={searchResult}
           onPortfolioCreate={onPortfolioCreate}
