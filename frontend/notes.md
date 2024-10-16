@@ -6,7 +6,7 @@
 - npm install dotenv --save
 
 =========================================
-up2: - analysing the prop drilling of onPortfolioCreate
+up2: - analysing the onPortfolioCreate function definition and how the array is funcitoning with our ListPortfolio and CardPortfolio
 
 TS: 13 - Arrays
 
