@@ -4,6 +4,8 @@ import CardList from "./Components/CardList/CardList";
 import { Search } from "./Components/Search/Search";
 import { searchCompanies } from "./Api/api";
 import ListPortfolio from "./Components/Portfolio/ListPortfolio/ListPortfolio";
+import Navbar from "./Components/Navbar/Navbar";
+import Hero from "./Components/Hero/Hero";
 
 function App() {
   const [search, setSearch] = useState<string>(""); // users search query
@@ -53,6 +55,7 @@ function App() {
   return (
     <>
       <div className="App">
+        <Navbar />
         {/* pass down three props to child component from parent: 1 state variable and two functions */}
         <Search handleChange={handleChange} handleClick={handleClick} />
         {serverError && <h1>{serverError}</h1>}
