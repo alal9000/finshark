@@ -1,14 +1,13 @@
 import "./main.css";
 import { StrictMode } from "react";
 import { createRoot } from "react-dom/client";
-import App from "./App.tsx";
-import React from "react";
-import { searchCompanies } from "./Api/api.ts";
+import { RouterProvider } from "react-router-dom";
+import { router } from "./Routes/Routes.tsx";
 
 // console.log(searchCompanies('nvda'));
 
 createRoot(document.getElementById("root")!).render(
   <StrictMode>
-    <App />
+    <RouterProvider router={router} />
   </StrictMode>
 );

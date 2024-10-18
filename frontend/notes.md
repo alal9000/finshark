@@ -4,6 +4,13 @@
 - npm install axios --save
 - npm install --save-dev @types/axios
 - npm install dotenv --save
+-
+- npm install react-router
+- npm install react-router-dom
+- npm install -D @types/react-router-dom
+- npm install -D @types/react-router
+
+note when using TS we often have to install the types for a package seperately uey
 
 =========================================
 up2: - analysing the onPortfolioCreate function definition and how the array is funcitoning with our ListPortfolio and CardPortfolio
@@ -34,3 +41,7 @@ npx tailwindcss init -p
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+===================================================
+
+# react router install
