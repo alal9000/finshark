@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from "react";
+import { useEffect, useState } from "react";
 import { CompanyIncomeStatement } from "../../Types/company";
 import { useOutletContext } from "react-router-dom";
 import { getIncomeStatement } from "../../Api/api";
@@ -73,6 +73,7 @@ const IncomeStatement = (props: Props) => {
     };
     incomeStatementFetch();
   }, [])
+  
   return (
     <>
       {incomeStatement ? <><Table config={configs} data={incomeStatement} /></> : <>Loading...</>}
