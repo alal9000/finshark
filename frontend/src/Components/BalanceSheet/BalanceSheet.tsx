@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from 'react'
+ import React, { useEffect, useState } from 'react'
 import { CompanyBalanceSheet } from '../../Types/company';
 import { useOutletContext } from 'react-router';
 import { getBalanceSheet } from '../../Api/api';
