@@ -3,8 +3,9 @@ import { CompanyIncomeStatement } from "../../Types/company";
 import { useOutletContext } from "react-router-dom";
 import { getIncomeStatement } from "../../Api/api";
 import Table from "../Table/Table";
+import Spinner from "../Spinner/Spinner";
 
-interface Props {};
+interface Props {}
 
 const configs = [
   {
@@ -64,7 +65,8 @@ const configs = [
 
 const IncomeStatement = (props: Props) => {
   const ticker = useOutletContext<string>();
-  const [incomeStatement, setIncomeStatement] = useState<CompanyIncomeStatement[]>();
+  const [incomeStatement, setIncomeStatement] =
+    useState<CompanyIncomeStatement[]>();
 
   useEffect(() => {
     const incomeStatementFetch = async () => {
@@ -72,13 +74,19 @@ const IncomeStatement = (props: Props) => {
       setIncomeStatement(result?.data);
     };
     incomeStatementFetch();
-  }, [])
-  
+  }, []);
+
   return (
     <>
-      {incomeStatement ? <><Table config={configs} data={incomeStatement} /></> : <>Loading...</>}
+      {incomeStatement ? (
+        <>
+          <Table config={configs} data={incomeStatement} />
+        </>
+      ) : (
+        <Spinner />
+      )}
     </>
-  )
+  );
 };
 
 export default IncomeStatement;

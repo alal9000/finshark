@@ -3,6 +3,7 @@ import { CompanyKeyMetrics } from "../../Types/company";
 import { useOutletContext } from "react-router-dom";
 import { getKeyMetrics } from "../../Api/api";
 import RatioList from "../RatioList/RatioList";
+import Spinner from "../Spinner/Spinner";
 
 interface Props {}
 
@@ -74,20 +75,20 @@ const CompanyProfile = (props: Props) => {
   useEffect(() => {
     const getCompanyKeyMetrics = async () => {
       const value = await getKeyMetrics(ticker);
-      setCompanyData(value?.data[0])
+      setCompanyData(value?.data[0]);
     };
     getCompanyKeyMetrics();
-  }, [])
+  }, []);
 
   return (
     <>
-    { companyData ? (
-      <RatioList data={companyData} config={tableConfig} />
-    ) : (
-      <p>Loading...</p>
-    )}
+      {companyData ? (
+        <RatioList data={companyData} config={tableConfig} />
+      ) : (
+        <Spinner />
+      )}
     </>
-  )
+  );
 };
 
 export default CompanyProfile;
