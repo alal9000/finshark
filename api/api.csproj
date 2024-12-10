@@ -12,6 +12,6 @@
     <PackageReference Include="Microsoft.EntityFrameworkCore.Design" Version="8.0.10" />
   </ItemGroup>
   <ItemGroup>
-    <Folder Include="Dtos\Stock\" />
+    <Folder Include="Dtos\Comment\" />
   </ItemGroup>
 </Project>

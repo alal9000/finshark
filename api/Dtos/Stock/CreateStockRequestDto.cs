@@ -1,9 +1,9 @@
-﻿namespace api.Dtos.Comment
-{
-    public class StockDto
-    {
-        public int Id { get; set; }
+﻿using System.ComponentModel.DataAnnotations.Schema;
 
+namespace api.Dtos.Stock
+{
+    public class CreateStockRequestDto
+    {
         public string Symbol { get; set; } = string.Empty;
 
         public string CompanyName { get; set; } = string.Empty;
