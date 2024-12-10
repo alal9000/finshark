@@ -7,7 +7,6 @@ namespace api.Models
 {
     public class Comment
     {
-       // Navigation 
 
        public int Id { get; set; }
        public string Title { get; set; } = string.Empty;
