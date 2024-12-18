@@ -27,6 +27,22 @@
   },
   {
     "ContainingType": "api.Controllers.CommentController",
+    "Method": "Delete",
+    "RelativePath": "api/comment/{id}",
+    "HttpMethod": "DELETE",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "id",
+        "Type": "System.Int32",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "api.Controllers.CommentController",
     "Method": "Create",
     "RelativePath": "api/comment/{stockId}",
     "HttpMethod": "POST",
