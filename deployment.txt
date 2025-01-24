@@ -1,0 +1,27 @@
+FE: vercel
+BE: aws lightsail + docker
+DB: aws RDBS
+
+
+
+
+
+
+
+
+
+
+
+
+=======================================================
+prompt:
+
+so my plan to deploy my finshark app would be 3 sperate deployments for fe, be and db.
+
+front end: use vercel to deploy the TS + react
+
+back-end: use my aws lightsail instance + containers to deploy the .NET web api via docker
+
+db: use aws RBDS to serve the db
+
+would this work?
