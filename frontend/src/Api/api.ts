@@ -11,7 +11,7 @@ import {
 
 const API_KEY = import.meta.env.VITE_FINANCIAL_MODELING_PREP_API_KEY;
 
-console.log("API Key:", API_KEY);
+// console.log("API Key:", API_KEY);
 
 
 export const searchCompanies = async (query: string) => {
